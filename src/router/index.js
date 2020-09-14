@@ -4,6 +4,7 @@ import Home from '../views/Home.vue'
 import Foods from '../views/Foods.vue'
 import FoodOrder from '../views/FoodOrder.vue'
 import History from '../views/History.vue'
+import DetailHistory from '../views/DetailHistory.vue'
 // import FoodOrders from '../views/FoodOrders.vue'
 
 Vue.use(VueRouter)
@@ -28,6 +29,11 @@ const routes = [
     path: '/history',
     name: 'History',
     component: History
+  },
+  {
+    path: '/DetailHistory',
+    name: 'DetailHistory',
+    component: DetailHistory
   },
   // {
   //   path: '/food_orders',

@@ -27,11 +27,19 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
     integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
   </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+  <script src="https://unpkg.com/vue-chartjs/dist/vue-chartjs.min.js"></script>
   <script>
  $(document).ready(function(){
     $('[data-toggle="tooltip"]').tooltip();   
 
-    
+    const cartOrder = document.querySelector('.cart-order')
+const cart = document.querySelector('.carts')
+const shop = document.querySelector('.shop')
+cartOrder.addEventListener('click', function (e) {
+  cart.classList.toggle('slide')
+  console.log('a')
+})
 });
   </script>
 </body>

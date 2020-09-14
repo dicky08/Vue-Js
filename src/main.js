@@ -1,7 +1,8 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
-
+import './plugin/echart'
+import moment from 'moment'
 // Import Bootsrap
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
@@ -12,6 +13,7 @@ import './assets/css/style.css'
 import VueToast from 'vue-toast-notification'
 // Import one of available themes
 import 'vue-toast-notification/dist/theme-default.css'
+import VueCharts, { Bar, Line } from 'vue-chartjs'
 
 // 1. Import Chart.js so you can use the global Chart object
 // import Chart from 'chart.js'
@@ -20,8 +22,10 @@ import 'vue-toast-notification/dist/theme-default.css'
 
 Vue.config.productionTip = false
 // import 'vue-toast-notification/dist/theme-sugar.css';
-// Vue.use(Chart)
-// Vue.use(generateChart)
+Vue.use(moment)
+Vue.use(VueCharts)
+Vue.use(Bar)
+Vue.use(Line)
 Vue.use(VueToast)
 // Install BootstrapVue
 Vue.use(BootstrapVue)
